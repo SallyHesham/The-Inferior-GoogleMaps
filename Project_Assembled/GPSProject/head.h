@@ -12,3 +12,8 @@ void ledBlue(void);
 void ledGreen(void);
 double distanceMarkII(double x, double y);
 extern int digit1, digit2, digit3;
+extern double PX;
+extern double PY;
+extern int firstPoint;
+extern double totalDist;
+extern double dist;
