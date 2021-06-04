@@ -2,6 +2,12 @@
 #include "head.h"
 #include "stdlib.h"
 
+double PX = 0;
+double PY = 0;
+int firstPoint = 0;
+double totalDist = 0;
+double dist = 0;
+
 
 int main(){
 	initPortF();
@@ -16,7 +22,7 @@ int main(){
 	for(int i=0;i<10;i++){
 		//x += rand()/(RAND_MAX);
 		//y += rand()/(RAND_MAX);
-		int distloc = (int)(distance((float)(0.5+i),(float)(0.4+i))+0.5);
+		int distloc = (int)(distanceMarkII((double)(0.5+i),(double)(0.4+i))+0.5);
 			//float x = i/10+0.1;
 			//float y = i/10+0.2;
 			//totDist += (int)(distance(x,y)+0.5);

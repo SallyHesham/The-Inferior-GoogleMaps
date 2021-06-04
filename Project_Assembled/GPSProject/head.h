@@ -17,3 +17,4 @@ extern double PY;
 extern int firstPoint;
 extern double totalDist;
 extern double dist;
+int distanceMarkIII(int x, int y);
