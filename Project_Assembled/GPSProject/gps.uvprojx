@@ -428,6 +428,11 @@
               <FileType>1</FileType>
               <FilePath>.\ledColors.c</FilePath>
             </File>
+            <File>
+              <FileName>distanceMarkII.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\distanceMarkII.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

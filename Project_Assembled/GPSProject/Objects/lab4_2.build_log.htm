@@ -27,61 +27,56 @@ Project File Date:  06/04/2021
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-files/SevenSegment.c(35): warning: no previous extern declaration for non-static variable 'numbers' [-Wmissing-variable-declarations]
-int numbers[10] = {0x00,0x02,0x10,0x12,0x19,      // Each value turns on bits needed
-    ^
-files/SevenSegment.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int numbers[10] = {0x00,0x02,0x10,0x12,0x19,      // Each value turns on bits needed
-^
-files/SevenSegment.c(40): warning: no previous extern declaration for non-static variable 'calc' [-Wmissing-variable-declarations]
-unsigned long calc=0;                                                                // Calculated value initialization
-              ^
-files/SevenSegment.c(40): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-unsigned long calc=0;                                                                // Calculated value initialization
-^
-files/SevenSegment.c(112): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-        GPIO_PORTE_DATA_R = digit;                                              // Selects digit
-                          ~ ^~~~~
-files/SevenSegment.c(113): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-        GPIO_PORTB_DATA_R = numbers[number];    // Turns on number in selected digit
-                          ~ ^~~~~~~~~~~~~~~
-files/SevenSegment.c(38): warning: no previous extern declaration for non-static variable 'digit1' [-Wmissing-variable-declarations]
-int digit1, digit2, digit3;                             // Number to be displayed in each digit
-    ^
-files/SevenSegment.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int digit1, digit2, digit3;                             // Number to be displayed in each digit
-^
-files/SevenSegment.c(38): warning: no previous extern declaration for non-static variable 'digit2' [-Wmissing-variable-declarations]
-int digit1, digit2, digit3;                             // Number to be displayed in each digit
-            ^
-files/SevenSegment.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int digit1, digit2, digit3;                             // Number to be displayed in each digit
-^
-files/SevenSegment.c(38): warning: no previous extern declaration for non-static variable 'digit3' [-Wmissing-variable-declarations]
-int digit1, digit2, digit3;                             // Number to be displayed in each digit
-                    ^
-files/SevenSegment.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int digit1, digit2, digit3;                             // Number to be displayed in each digit
-^
-7 warnings generated.
-compiling SevenSegment.c...
-main.c(16): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
-                        float x = i/10+0.1;
-                              ~   ~~~~^~~~
-main.c(17): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
-                        float y = i/10+0.2;
-                              ~   ~~~~^~~~
-main.c(16): warning: unused variable 'x' [-Wunused-variable]
-                        float x = i/10+0.1;
-                              ^
-main.c(17): warning: unused variable 'y' [-Wunused-variable]
-                        float y = i/10+0.2;
-                              ^
-main.c(11): warning: unused variable 'totDist' [-Wunused-variable]
-        int totDist = 0;
-            ^
-5 warnings generated.
+main.c(13): warning: unused variable 'x' [-Wunused-variable]
+                float x = rand()/(RAND_MAX)+1;
+                      ^
+main.c(14): warning: unused variable 'y' [-Wunused-variable]
+                float y = rand()/(RAND_MAX)+1;
+                      ^
+2 warnings generated.
 compiling main.c...
+files/distance.c(19): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+        the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
+                     ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+files/distance.c(19): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
+                                                              ~~~ ~~~~~~~~~~~^~~~~~~~~~~~
+files/distance.c(19): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
+                            ~~~ ~~~~~~~~~~~^~~~~~~~~~~~
+files/distance.c(4): warning: no previous prototype for function 'distance' [-Wmissing-prototypes]
+float distance(float x, float y)
+      ^
+files/distance.c(4): note: declare 'static' if the function is not intended to be used outside of this translation unit
+float distance(float x, float y)
+^
+static 
+4 warnings generated.
+compiling distance.c...
+files/portFinit.c(3): warning: no previous prototype for function 'initPortF' [-Wmissing-prototypes]
+void initPortF() {   
+     ^
+files/portFinit.c(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initPortF() {   
+^
+static 
+files/portFinit.c(3): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void initPortF() {   
+              ^
+2 warnings generated.
+compiling portFinit.c...
+files/portsABinit.c(3): warning: no previous prototype for function 'initPortAB' [-Wmissing-prototypes]
+void initPortAB() {
+     ^
+files/portsABinit.c(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initPortAB() {
+^
+static 
+files/portsABinit.c(3): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void initPortAB() {
+               ^
+2 warnings generated.
+compiling portsABinit.c...
 ledColors.c(3): warning: no previous prototype for function 'ledRed' [-Wmissing-prototypes]
 void ledRed(){
      ^
@@ -120,6 +115,59 @@ void ledGreen(){
              ^
 8 warnings generated.
 compiling ledColors.c...
+distanceMarkII.c(16): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                float dist = sqrt(pow(x-PX,2) + pow(y-PY,2));
+                      ~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+distanceMarkII.c(16): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                float dist = sqrt(pow(x-PX,2) + pow(y-PY,2));
+                                                ~~~ ~^~~
+distanceMarkII.c(16): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                float dist = sqrt(pow(x-PX,2) + pow(y-PY,2));
+                                  ~~~ ~^~~
+distanceMarkII.c(22): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+4 warnings generated.
+compiling distanceMarkII.c...
+files/SevenSegment.c(35): warning: no previous extern declaration for non-static variable 'numbers' [-Wmissing-variable-declarations]
+int numbers[10] = {0x00,0x02,0x10,0x12,0x19,      // Each value turns on bits needed
+    ^
+files/SevenSegment.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int numbers[10] = {0x00,0x02,0x10,0x12,0x19,      // Each value turns on bits needed
+^
+files/SevenSegment.c(40): warning: no previous extern declaration for non-static variable 'calc' [-Wmissing-variable-declarations]
+unsigned long calc=0;                                                                // Calculated value initialization
+              ^
+files/SevenSegment.c(40): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned long calc=0;                                                                // Calculated value initialization
+^
+files/SevenSegment.c(112): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_PORTE_DATA_R = digit;                                              // Selects digit
+                          ~ ^~~~~
+files/SevenSegment.c(113): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_PORTB_DATA_R = numbers[number];    // Turns on number in selected digit
+                          ~ ^~~~~~~~~~~~~~~
+files/SevenSegment.c(38): warning: no previous extern declaration for non-static variable 'digit1' [-Wmissing-variable-declarations]
+int digit1, digit2, digit3;                             // Number to be displayed in each digit
+    ^
+files/SevenSegment.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int digit1, digit2, digit3;                             // Number to be displayed in each digit
+^
+files/SevenSegment.c(38): warning: no previous extern declaration for non-static variable 'digit2' [-Wmissing-variable-declarations]
+int digit1, digit2, digit3;                             // Number to be displayed in each digit
+            ^
+files/SevenSegment.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int digit1, digit2, digit3;                             // Number to be displayed in each digit
+^
+files/SevenSegment.c(38): warning: no previous extern declaration for non-static variable 'digit3' [-Wmissing-variable-declarations]
+int digit1, digit2, digit3;                             // Number to be displayed in each digit
+                    ^
+files/SevenSegment.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int digit1, digit2, digit3;                             // Number to be displayed in each digit
+^
+7 warnings generated.
+compiling SevenSegment.c...
+assembling startup_TM4C123.s...
 files/led.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
                 GPIO_PORTF_DATA_R  &= ~0x08;
                                    ~~ ^~~~~
@@ -132,52 +180,9 @@ void led(int Dis){
 static 
 2 warnings generated.
 compiling led.c...
-files/distance.c(19): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
-        the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
-                     ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-files/distance.c(19): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
-        the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
-                                                              ~~~ ~~~~~~~~~~~^~~~~~~~~~~~
-files/distance.c(19): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
-        the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
-                            ~~~ ~~~~~~~~~~~^~~~~~~~~~~~
-files/distance.c(4): warning: no previous prototype for function 'distance' [-Wmissing-prototypes]
-float distance(float x, float y)
-      ^
-files/distance.c(4): note: declare 'static' if the function is not intended to be used outside of this translation unit
-float distance(float x, float y)
-^
-static 
-4 warnings generated.
-compiling distance.c...
-files/portsABinit.c(3): warning: no previous prototype for function 'initPortAB' [-Wmissing-prototypes]
-void initPortAB() {
-     ^
-files/portsABinit.c(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void initPortAB() {
-^
-static 
-files/portsABinit.c(3): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void initPortAB() {
-               ^
-2 warnings generated.
-compiling portsABinit.c...
-files/portFinit.c(3): warning: no previous prototype for function 'initPortF' [-Wmissing-prototypes]
-void initPortF() {   
-     ^
-files/portFinit.c(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void initPortF() {   
-^
-static 
-files/portFinit.c(3): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void initPortF() {   
-              ^
-2 warnings generated.
-compiling portFinit.c...
-assembling startup_TM4C123.s...
 linking...
-Program Size: Code=568 RO-data=636 RW-data=0 ZI-data=512  
-".\Objects\lab4_2.axf" - 0 Error(s), 30 Warning(s).
+Program Size: Code=628 RO-data=652 RW-data=4 ZI-data=512  
+".\Objects\lab4_2.axf" - 0 Error(s), 31 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -190,7 +195,7 @@ Package Vendor: Keil
   C:\Users\sally\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

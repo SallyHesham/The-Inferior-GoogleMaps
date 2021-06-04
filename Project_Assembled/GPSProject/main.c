@@ -8,13 +8,13 @@ int main(){
 //portE needed for 7seg here
 	ledRed();
 	
-	int totDist = 0;
+	srand(1);
 	for(int i=0;i<10;i++){
-			//srand(1);
-			//float x = rand()/(RAND_MAX)+1;
-			//float y = rand()/(RAND_MAX)+1;
-			float x = i/10+0.1;
-			float y = i/10+0.2;
+		float x = rand()/(RAND_MAX)+1;
+		float y = rand()/(RAND_MAX)+1;
+		//int dist = (int)(distanceMarkII(x,y)+0.5);
+			//float x = i/10+0.1;
+			//float y = i/10+0.2;
 			//totDist += (int)(distance(x,y)+0.5);
 			//GPIO_PORTB_DATA_R = totDist;
 	}

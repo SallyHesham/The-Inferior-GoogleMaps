@@ -10,3 +10,4 @@ void NumSplit(int calculated);
 void ledRed(void);
 void ledBlue(void);
 void ledGreen(void);
+float distanceMarkII(float x, float y);
