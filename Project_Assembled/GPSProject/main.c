@@ -16,13 +16,13 @@ int main(){
 	for(int i=0;i<10;i++){
 		//x += rand()/(RAND_MAX);
 		//y += rand()/(RAND_MAX);
-		int distloc = (int)(distanceMarkII((double)(0.5+i),(double)(0.4+i))+0.5);
+		int distloc = (int)(distance((float)(0.5+i),(float)(0.4+i))+0.5);
 			//float x = i/10+0.1;
 			//float y = i/10+0.2;
 			//totDist += (int)(distance(x,y)+0.5);
 			//GPIO_PORTB_DATA_R = totDist;
 
-		//int dist =0;
+		//int distloc =0;
 		NumSplit(distloc);		 	// Split value in counter into 4 numbers
 		Display(1,digit1);								// Display number for lowest digit
 	  Display(2,digit2);			

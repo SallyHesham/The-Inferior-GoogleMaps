@@ -1,4 +1,3 @@
-#include "C:\Users\sally\OneDrive\Desktop\Coding\GitHub\The-Inferior-GoogleMaps\Project_Assembled\GPSProject\head.h"
 #include <stdio.h>
 #include <math.h>
 double distance(float x, float y)
@@ -25,5 +24,11 @@ double distance(float x, float y)
 	//}
 	printf(" total_distance = %f", total_distance);
 	return total_distance;
+
+}
+int main()
+{
+
+	distance(2, 3);
 
 }

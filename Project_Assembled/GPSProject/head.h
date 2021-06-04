@@ -1,5 +1,5 @@
 #define FUNC_HEAD
-float distance(float x, float y);
+double distance(float x, float y);
 void led (int Dis);
 void initPortF(void);
 void initPortAB(void);
