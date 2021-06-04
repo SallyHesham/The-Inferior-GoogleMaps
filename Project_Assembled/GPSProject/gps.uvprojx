@@ -433,6 +433,11 @@
               <FileType>1</FileType>
               <FilePath>.\distanceMarkII.c</FilePath>
             </File>
+            <File>
+              <FileName>portEinit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\portEinit.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
