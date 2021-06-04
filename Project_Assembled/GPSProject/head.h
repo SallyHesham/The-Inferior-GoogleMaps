@@ -11,3 +11,4 @@ void ledRed(void);
 void ledBlue(void);
 void ledGreen(void);
 float distanceMarkII(float x, float y);
+extern int digit1, digit2, digit3;

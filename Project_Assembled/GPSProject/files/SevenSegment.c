@@ -1,4 +1,5 @@
 #include "tm4c123gh6pm.h"
+#include "C:\Users\sally\OneDrive\Desktop\Coding\GitHub\The-Inferior-GoogleMaps\Project_Assembled\GPSProject\head.h"
 
 //Create definitions for Port B registers
 #define GPIO_PORTB_DATA_R       (*((volatile unsigned long *)0x400053FC))
@@ -35,7 +36,7 @@
 int numbers[10] = {0x00,0x02,0x10,0x12,0x19,	  // Each value turns on bits needed
 									 0x24,0x30,0x40,0x078,0x79};  // to show numbers in display
 
-int digit1, digit2, digit3;               	  	// Number to be displayed in each digit
+int digit1, digit2, digit3;	// Number to be displayed in each digit
 					
 unsigned long calc=0;							    	     // Calculated value initialization
 
@@ -116,7 +117,7 @@ void Display(int digit, int number){
 
 // Splits number in function into 3 separate numbers for each digit
 void NumSplit(int calculated){
-	digit1 = calculated%10;	 //Copies value in function, divides it by 10 and then keeps remainder
+		digit1 = calculated%10;	 //Copies value in function, divides it by 10 and then keeps remainder
     calculated /= 10;	    //Dividing value in counter by 10 to shift it by one decimal
     digit2 = calculated%10;
     calculated /= 10;
