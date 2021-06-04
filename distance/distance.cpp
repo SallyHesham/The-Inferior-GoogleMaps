@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include <iostream>
-using namespace std;
-
-float distance(float x, float y)
+#include <math.h>
+double distance(float x, float y)
 {
 	float dist[2][2];
 	dist[1][0] = x;
 	dist[1][1] = y;
-	float the_distance, total_distance = 0;
+	dist[0][0] = 2.0;
+	dist[0][1] = 1.0;
+	double the_distance, total_distance = 0;
 	//if(time == 0){
 	//{
 	//	the_distance = 0;
@@ -17,12 +17,12 @@ float distance(float x, float y)
 	//}
 	//else
 	//{
-	the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
+	the_distance = sqrt(pow((double)dist[1][0] - dist[0][0], 2)+ pow((double)dist[1][1] - dist[0][1], 2));
 	total_distance += the_distance;
 	dist[0][0] = dist[1][0];
 	dist[0][1] = dist[1][1];
 	//}
-	cout << " total_distance = " << total_distance;
+	printf(" total_distance = %f", total_distance);
 	return total_distance;
 
 }
