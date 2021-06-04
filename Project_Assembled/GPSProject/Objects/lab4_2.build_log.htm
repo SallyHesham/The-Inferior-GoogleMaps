@@ -33,22 +33,6 @@ files/led.c(12): warning: implicit conversion changes signedness: 'int' to 'unsi
                                    ~~ ^~~~~
 1 warning generated.
 compiling led.c...
-compiling portFinit.c...
-ledColors.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-        GPIO_PORTF_DATA_R &= ~0x0E; 
-                          ~~ ^~~~~
-ledColors.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-        GPIO_PORTF_DATA_R &= ~0x0E; 
-                          ~~ ^~~~~
-2 warnings generated.
-compiling ledColors.c...
-compiling portsABinit.c...
-portEinit.c(6): warning: while loop has empty body [-Wempty-body]
-        while((SYSCTL_PRGPIO_R&0x10) == 0); 
-                                          ^
-portEinit.c(6): note: put the semicolon on a separate line to silence this warning
-1 warning generated.
-compiling portEinit.c...
 distanceMarkII.c(16): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
                 float dist = sqrt(pow(x-PX,2) + pow(y-PY,2));
                       ~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +44,6 @@ distanceMarkII.c(16): warning: implicit conversion increases floating-point prec
                                   ~~~ ~^~~
 3 warnings generated.
 compiling distanceMarkII.c...
-assembling startup_TM4C123.s...
 files/distance.c(21): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
         the_distance = sqrt(pow(dist[1][0] - dist[0][0], 2) + pow(dist[1][1] - dist[0][1], 2));
                      ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,6 +55,18 @@ files/distance.c(21): warning: implicit conversion increases floating-point prec
                             ~~~ ~~~~~~~~~~~^~~~~~~~~~~~
 3 warnings generated.
 compiling distance.c...
+compiling portsABinit.c...
+compiling portEinit.c...
+ledColors.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_PORTF_DATA_R &= ~0x0E; 
+                          ~~ ^~~~~
+ledColors.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_PORTF_DATA_R &= ~0x0E; 
+                          ~~ ^~~~~
+2 warnings generated.
+compiling ledColors.c...
+assembling startup_TM4C123.s...
+compiling portFinit.c...
 files/SevenSegment.c(36): warning: no previous extern declaration for non-static variable 'numbers' [-Wmissing-variable-declarations]
 int numbers[10] = {0x00,0x02,0x10,0x12,0x19,      // Each value turns on bits needed
     ^
@@ -93,8 +88,8 @@ files/SevenSegment.c(114): warning: implicit conversion changes signedness: 'int
 4 warnings generated.
 compiling SevenSegment.c...
 linking...
-Program Size: Code=872 RO-data=652 RW-data=40 ZI-data=528  
-".\Objects\lab4_2.axf" - 0 Error(s), 14 Warning(s).
+Program Size: Code=928 RO-data=652 RW-data=44 ZI-data=528  
+".\Objects\lab4_2.axf" - 0 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>
 
