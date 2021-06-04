@@ -74,6 +74,7 @@ void PortB_Init(void){
   GPIO_PORTB_PUR_R = 0x00;          // Enable pullup resistors on PB4,PF0       
   GPIO_PORTB_DEN_R = 0x7F;          // Enable digital pins PB6-PB0        
 }
+
 void PortE_Init(void){ 
   SYSCTL_RCGC2_R |= 0x00000010;     // Port E clock initialized
   GPIO_PORTE_CR_R = 0x0F;           // Allow changes to PE4-0       
@@ -83,6 +84,7 @@ void PortE_Init(void){
   GPIO_PORTE_PUR_R = 0x00;          // Disable pullup resistors       
   GPIO_PORTE_DEN_R = 0x0F;          // Enable digital pins PE3-PE0
 }
+
 void PortF_Init(void){ 
   SYSCTL_RCGC2_R |= 0x00000020;     // Port F clock initialized
   GPIO_PORTF_LOCK_R = 0x4C4F434B;   // Unlock PortF
