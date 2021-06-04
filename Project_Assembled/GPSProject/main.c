@@ -29,10 +29,12 @@ int main(){
 			//GPIO_PORTB_DATA_R = totDist;
 
 		//int distloc =0;
+		ledBlue();
 		NumSplit(distloc);		 	// Split value in counter into 4 numbers
 		Display(1,digit1);								// Display number for lowest digit
 	  Display(2,digit2);			
 	  Display(4,digit3);
+		if (distloc > 100){ledGreen();}	
 	}
 	
 	/*
