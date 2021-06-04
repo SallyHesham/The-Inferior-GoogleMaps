@@ -10,5 +10,5 @@ void NumSplit(int calculated);
 void ledRed(void);
 void ledBlue(void);
 void ledGreen(void);
-float distanceMarkII(float x, float y);
+double distanceMarkII(double x, double y);
 extern int digit1, digit2, digit3;

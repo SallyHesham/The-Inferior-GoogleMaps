@@ -8,19 +8,19 @@ int main(){
 	PortE_Init();
 	ledRed();
 	
-	float x = 0;
-	float y = 0;
+	//float x = 0;
+	//float y = 0;
 	//srand(1);
 	for(int i=0;i<10;i++){
-		x += rand()/(RAND_MAX);
-		y += rand()/(RAND_MAX);
-		//int dist = (int)(distanceMarkII(x,y)+0.5);
+		//x += rand()/(RAND_MAX);
+		//y += rand()/(RAND_MAX);
+		int dist = (int)(distanceMarkII((double)(0.5+i),(double)(0.4+i))+0.5);
 			//float x = i/10+0.1;
 			//float y = i/10+0.2;
 			//totDist += (int)(distance(x,y)+0.5);
 			//GPIO_PORTB_DATA_R = totDist;
 
-		int dist =0;
+		//int dist =0;
 		NumSplit(dist);		 	// Split value in counter into 4 numbers
 		Display(1,digit1);								// Display number for lowest digit
 	  Display(2,digit2);			
