@@ -10,12 +10,12 @@ void NumSplit(int calculated);
 void ledRed(void);
 void ledBlue(void);
 void ledGreen(void);
-double distanceMarkII(double x, double y);
+float distanceMarkII(float x, float y);
 extern int digit1, digit2, digit3;
-extern double PX;
-extern double PY;
+extern float PX;
+extern float PY;
 extern int firstPoint;
-extern double totalDist;
-extern double dist;
+extern float totalDist;
+extern float dist;
 int distanceMarkIII(int x, int y);
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))

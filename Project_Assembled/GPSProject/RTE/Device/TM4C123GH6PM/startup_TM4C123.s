@@ -233,6 +233,12 @@ Reset_Handler   PROC
                 
                 IMPORT  __main
                 
+				LDR  	R0, =0xE000ED88
+				LDR     R1, [R0]
+				ORR     R1, R1, #(0xF << 20)
+				STR     R1, [R0]
+				DSB
+				ISB
      
                 LDR     R0, =__main
                 BX      R0
