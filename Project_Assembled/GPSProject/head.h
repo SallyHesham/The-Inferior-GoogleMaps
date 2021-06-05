@@ -18,3 +18,4 @@ extern int firstPoint;
 extern double totalDist;
 extern double dist;
 int distanceMarkIII(int x, int y);
+#define CPACR     (*((volatile unsigned long *)0xE000ED88))

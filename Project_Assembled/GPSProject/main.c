@@ -2,6 +2,7 @@
 #include "head.h"
 #include "stdlib.h"
 
+
 double PX = 0;
 double PY = 0;
 int firstPoint = 0;
@@ -10,6 +11,7 @@ double dist = 0;
 
 
 int main(){
+	CPACR = CPACR | (0xF << 20);
 	initPortF();
 	initPortAB();
 	PortE_Init();
