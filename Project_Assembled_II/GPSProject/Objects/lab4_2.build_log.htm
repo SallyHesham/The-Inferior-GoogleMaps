@@ -17,17 +17,16 @@ Library Manager: ArmAr.exe V6.16
 Hex Converter:   FromElf.exe V6.16
 CPU DLL:         SARMCM3.DLL V5.34.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      lmidk-agdi.dll V???
+    Target DLL: lmidk-agdi.dll
 Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
-C:\Users\sally\Desktop\The-Inferior-GoogleMaps\Project_Assembled_II\GPSProject\gps.Target_1.uvprojx
+C:\Users\sally\OneDrive\Desktop\Coding\GitHub\The-Inferior-GoogleMaps\Project_Assembled_II\GPSProject\gps.Target_1.uvprojx
 Project File Date:  06/06/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target_1'
-assembling startup_TM4C123.s...
 ledColors.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
         GPIO_PORTF_DATA_R &= ~0x0E; 
                           ~~ ^~~~~
@@ -36,6 +35,7 @@ ledColors.c(15): warning: implicit conversion changes signedness: 'int' to 'unsi
                           ~~ ^~~~~
 2 warnings generated.
 compiling ledColors.c...
+assembling fpu.s...
 main.c(12): warning: no previous prototype for function 'Delayyy' [-Wmissing-prototypes]
 void Delayyy(void){
      ^
@@ -43,23 +43,9 @@ main.c(12): note: declare 'static' if the function is not intended to be used ou
 void Delayyy(void){
 ^
 static 
-main.c(68): warning: code will never be executed [-Wunreachable-code]
-                if (distloc > 100){ledGreen();} 
-                    ^~~~~~~
-2 warnings generated.
+1 warning generated.
 compiling main.c...
-compiling portEinit.c...
-distanceMarkII.c(16): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
-                dist = sqrt(pow((x - PX), 2) + pow((y - PY), 2));
-                     ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-distanceMarkII.c(16): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
-                dist = sqrt(pow((x - PX), 2) + pow((y - PY), 2));
-                                               ~~~  ~~^~~~
-distanceMarkII.c(16): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
-                dist = sqrt(pow((x - PX), 2) + pow((y - PY), 2));
-                            ~~~  ~~^~~~
-3 warnings generated.
-compiling distanceMarkII.c...
+compiling portFinit.c...
 distanceMarkIII.c(5): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
                 PX = x;
                    ~ ^
@@ -92,7 +78,12 @@ distanceMarkIII.c(19): warning: implicit conversion turns floating-point number 
         ~~~~~~ ^~~~~~~~~
 10 warnings generated.
 compiling distanceMarkIII.c...
-assembling fpu.s...
+compiling portsABinit.c...
+led.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                GPIO_PORTF_DATA_R  &= ~0x08;
+                                   ~~ ^~~~~
+1 warning generated.
+compiling led.c...
 distance.c(7): warning: declaration shadows a variable in the global scope [-Wshadow]
         double dist[2][2];
                ^
@@ -107,13 +98,19 @@ distance.c(21): warning: unused variable 'lon2' [-Wunused-variable]
                ^
 3 warnings generated.
 compiling distance.c...
-compiling portFinit.c...
-led.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                GPIO_PORTF_DATA_R  &= ~0x08;
-                                   ~~ ^~~~~
-1 warning generated.
-compiling led.c...
-compiling portsABinit.c...
+distanceMarkII.c(16): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                dist = sqrt(pow((x - PX), 2) + pow((y - PY), 2));
+                     ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+distanceMarkII.c(16): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                dist = sqrt(pow((x - PX), 2) + pow((y - PY), 2));
+                                               ~~~  ~~^~~~
+distanceMarkII.c(16): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                dist = sqrt(pow((x - PX), 2) + pow((y - PY), 2));
+                            ~~~  ~~^~~~
+3 warnings generated.
+compiling distanceMarkII.c...
+compiling portEinit.c...
+assembling startup_TM4C123.s...
 SevenSegment.c(37): warning: no previous extern declaration for non-static variable 'numbers' [-Wmissing-variable-declarations]
 int numbers[10] = {0x00,0x02,0x10,0x12,0x19,   // Each value turns on bits needed
     ^
@@ -142,8 +139,8 @@ GPIO_PORTB_DATA_R = GPIO_PORTB_DATA_R | ((tens<<4)|units);
 compiling SevenSegment.c...
 compiling lcd 1.c...
 linking...
-Program Size: Code=2500 RO-data=652 RW-data=4 ZI-data=536  
-".\Objects\lab4_2.axf" - 0 Error(s), 27 Warning(s).
+Program Size: Code=2712 RO-data=652 RW-data=4 ZI-data=536  
+".\Objects\lab4_2.axf" - 0 Error(s), 26 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -156,7 +153,7 @@ Package Vendor: Keil
   C:\Users\sally\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
