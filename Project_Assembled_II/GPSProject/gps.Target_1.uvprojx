@@ -448,6 +448,11 @@
               <FileType>1</FileType>
               <FilePath>.\SevenSegment.c</FilePath>
             </File>
+            <File>
+              <FileName>lcd 1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lcd 1.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

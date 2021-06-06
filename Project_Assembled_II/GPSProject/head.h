@@ -18,4 +18,10 @@ extern int firstPoint;
 extern float totalDist;
 extern float dist;
 int distanceMarkIII(int x, int y);
+double distanceNew(double lat,double lon);
+void delay_ms(int n);
+void delay_us(int n);
+void LCD_command(unsigned char com);
+void LCD_DATA(unsigned char data);
+
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))
