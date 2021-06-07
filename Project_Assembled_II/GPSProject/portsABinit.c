@@ -2,8 +2,8 @@
 #include "head.h"
 
 void initPortAB() {
-  SYSCTL_RCGCGPIO_R |= 0x03;
-  while((SYSCTL_PRGPIO_R&0x03) == 0);
+  SYSCTL_RCGCGPIO_R |= 0x02;
+  while((SYSCTL_PRGPIO_R&0x02) == 0);
 	GPIO_PORTB_LOCK_R = 0x4C4F434B;
 	GPIO_PORTB_CR_R = 0xFF;
 	GPIO_PORTB_AMSEL_R = 0x00;
@@ -13,6 +13,8 @@ void initPortAB() {
 	GPIO_PORTB_DEN_R = 0xFF;
 	GPIO_PORTB_PUR_R = 0x00;
 
+	SYSCTL_RCGCGPIO_R |= 0x01;
+  while((SYSCTL_PRGPIO_R&0x01) == 0);
 	GPIO_PORTA_LOCK_R = 0x4C4F434B;
 	GPIO_PORTA_CR_R |= 0xE0;
 	GPIO_PORTA_AMSEL_R = 0x00;
