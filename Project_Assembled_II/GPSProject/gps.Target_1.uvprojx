@@ -414,11 +414,6 @@
               <FilePath>.\portEinit.c</FilePath>
             </File>
             <File>
-              <FileName>distanceMarkIII.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\distanceMarkIII.c</FilePath>
-            </File>
-            <File>
               <FileName>fpu.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\fpu.s</FilePath>

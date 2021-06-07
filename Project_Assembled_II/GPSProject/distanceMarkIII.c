@@ -1,5 +1,6 @@
 #include "math.h"
 #include "head.h"
+/*
 int distanceMarkIII(int x, int y) {
 	if (firstPoint == 0) {
 		PX = x;
@@ -18,3 +19,4 @@ int distanceMarkIII(int x, int y) {
 	}
 	return totalDist;
 }
+*/

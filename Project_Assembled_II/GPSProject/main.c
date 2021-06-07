@@ -2,12 +2,12 @@
 #include "head.h"
 #include "stdlib.h"
 
-
-float PX = 0;
-float PY = 0;
 int firstPoint = 0;
-float totalDist = 0;
-float dist = 0;
+double PX = 0;
+double PY = 0;
+double CX = 0;
+double CY = 0;
+double totalDist = 0;
 
 void Delayyy(void){
 	unsigned long volatile time;
@@ -44,7 +44,7 @@ int main(){
 		//x += rand()/(RAND_MAX);
 		//y += rand()/(RAND_MAX);
 		Delayyy();
-		int distloc = (int)(distanceMarkII((float)(0.5+i),(float)(0.4+i))+ (float)0.5);
+		int distloc = (int)(distanceNew((double)(0.5+i),(double)(0.4+i))+ (double)0.5);
 			//float x = i/10+0.1;
 			//float y = i/10+0.2;
 			//totDist += (int)(distance(x,y)+0.5);

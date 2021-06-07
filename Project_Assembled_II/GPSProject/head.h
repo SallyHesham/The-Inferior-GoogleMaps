@@ -12,16 +12,19 @@ void ledBlue(void);
 void ledGreen(void);
 float distanceMarkII(float x, float y);
 extern int digit1, digit2, digit3;
-extern float PX;
-extern float PY;
+extern double PX;
+extern double PY;
+extern double CX;
+extern double CY;
 extern int firstPoint;
-extern float totalDist;
-extern float dist;
-int distanceMarkIII(int x, int y);
+extern double totalDist;
+//extern double distance;
+//int distanceMarkIII(int x, int y);
 double distanceNew(double lat,double lon);
 void delay_ms(int n);
 void delay_us(int n);
 void LCD_command(unsigned char com);
 void LCD_DATA(unsigned char data);
+void Delayyy(void);
 
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))

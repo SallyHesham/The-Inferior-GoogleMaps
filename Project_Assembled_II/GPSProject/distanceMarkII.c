@@ -1,7 +1,7 @@
 #include "math.h"
 #include "head.h"
 
-
+/*
 float distanceMarkII(float x, float y) {
 	if (firstPoint == 0) {
 		PX = x;
@@ -20,3 +20,4 @@ float distanceMarkII(float x, float y) {
 	}
 	return totalDist;
 }
+*/
