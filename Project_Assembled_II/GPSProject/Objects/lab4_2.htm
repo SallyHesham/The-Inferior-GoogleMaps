@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\lab4_2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\lab4_2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Mon Jun  7 11:55:00 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Tue Jun  8 09:47:08 2021
 <BR><P>
-<H3>Maximum Stack Usage =        368 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        376 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; distanceNew &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 <P>
@@ -1285,8 +1285,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[89]"></a>distanceNew</STRONG> (Thumb, 632 bytes, Stack size 72 bytes, distance.o(.text.distanceNew))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = distanceNew &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[89]"></a>distanceNew</STRONG> (Thumb, 512 bytes, Stack size 80 bytes, distance.o(.text.distanceNew))
+<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = distanceNew &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sqrt
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sin
@@ -1301,7 +1301,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8f]"></a>initPortAB</STRONG> (Thumb, 132 bytes, Stack size 0 bytes, portsabinit.o(.text.initPortAB))
+<P><STRONG><a name="[8f]"></a>initPortAB</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, portsabinit.o(.text.initPortAB))
 <BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1322,7 +1322,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[76]"></a>main</STRONG> (Thumb, 328 bytes, Stack size 56 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 368<LI>Call Chain = main &rArr; distanceNew &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+<BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = main &rArr; distanceNew &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledRed
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledGreen

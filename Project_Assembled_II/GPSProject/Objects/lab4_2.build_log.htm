@@ -27,7 +27,6 @@ Project File Date:  06/07/2021
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target_1'
-compiling distanceMarkII.c...
 ledColors.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
         GPIO_PORTF_DATA_R &= ~0x0E; 
                           ~~ ^~~~~
@@ -36,7 +35,10 @@ ledColors.c(15): warning: implicit conversion changes signedness: 'int' to 'unsi
                           ~~ ^~~~~
 2 warnings generated.
 compiling ledColors.c...
+compiling main.c...
+compiling distanceMarkII.c...
 assembling fpu.s...
+compiling portsABinit.c...
 SevenSegment.c(37): warning: no previous extern declaration for non-static variable 'numbers' [-Wmissing-variable-declarations]
 int numbers[10] = {0x00,0x02,0x10,0x12,0x19,   // Each value turns on bits needed
     ^
@@ -63,15 +65,6 @@ GPIO_PORTB_DATA_R = GPIO_PORTB_DATA_R | ((tens<<4)|units);
                                       ~  ~~~~~~~~~^~~~~~
 6 warnings generated.
 compiling SevenSegment.c...
-compiling main.c...
-compiling portsABinit.c...
-led.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                GPIO_PORTF_DATA_R  &= ~0x08;
-                                   ~~ ^~~~~
-1 warning generated.
-compiling led.c...
-compiling portFinit.c...
-compiling portEinit.c...
 distance.c(5): warning: no previous extern declaration for non-static variable 'R' [-Wmissing-variable-declarations]
 int R = 6371 * 1000; //Radius of Earth in meter
     ^
@@ -84,18 +77,25 @@ double PI = 3.141592653589793;
 distance.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 double PI = 3.141592653589793;
 ^
-distance.c(27): warning: unused variable 'lon1' [-Wunused-variable]
-                double lon1 = PY;
+distance.c(28): warning: unused variable 'lon1' [-Wunused-variable]
+                double lon1 = dist[0][1];
                        ^
-distance.c(29): warning: unused variable 'lon2' [-Wunused-variable]
-                double lon2 = CY;
+distance.c(30): warning: unused variable 'lon2' [-Wunused-variable]
+                double lon2 = dist[1][1];
                        ^
 4 warnings generated.
 compiling distance.c...
+compiling portFinit.c...
+compiling portEinit.c...
+led.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                GPIO_PORTF_DATA_R  &= ~0x08;
+                                   ~~ ^~~~~
+1 warning generated.
+compiling led.c...
 assembling startup_TM4C123.s...
 compiling lcd 1.c...
 linking...
-Program Size: Code=6820 RO-data=1028 RW-data=20 ZI-data=560  
+Program Size: Code=6724 RO-data=1028 RW-data=20 ZI-data=560  
 ".\Objects\lab4_2.axf" - 0 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>

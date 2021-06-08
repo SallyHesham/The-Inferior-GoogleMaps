@@ -2,12 +2,9 @@
 #include "head.h"
 #include "stdlib.h"
 
-int firstPoint = 0;
-double PX = 0;
-double PY = 0;
-double CX = 0;
-double CY = 0;
-double totalDist = 0;
+int first_point = 0;
+double total_distance = 0;
+double dist[2][2];
 
 void Delayyy(void){
 	unsigned long volatile time;
