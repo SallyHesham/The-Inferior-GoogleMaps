@@ -1,4 +1,4 @@
-#include "stdint.h"
+/*#include "stdint.h"
 #include "math.h"
 #include "tm4c123gh6pm.h"
 #include "head.h"
@@ -50,7 +50,7 @@ void LCD_DATA(unsigned char data)
 	
 
 
-/*
+-
 void initA()
 {
 	uint32_t delay;
@@ -94,4 +94,5 @@ void initA()
   delay_ms(20);	
 
 }	
+
 */
