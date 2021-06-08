@@ -8,7 +8,7 @@ double dist[2][2];
 
 void Delayyy(void){
 	unsigned long volatile time;
-	time = (727240*200/91000)*100;  // 0.1 ms
+	time = (727240*200/91000)*100;  // 0.1 ms *100
   while(time){
 			time--;
   } 
