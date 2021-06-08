@@ -444,11 +444,6 @@
               <FilePath>.\SevenSegment.c</FilePath>
             </File>
             <File>
-              <FileName>lcd 1.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lcd 1.c</FilePath>
-            </File>
-            <File>
               <FileName>lcd.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\lcd.c</FilePath>

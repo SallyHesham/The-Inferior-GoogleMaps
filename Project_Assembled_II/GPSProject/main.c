@@ -34,6 +34,14 @@ int main(){
 	
 	ledRed();
 	
+	LCD_command(0x01);          //clear the screen 
+	LCD_command(0x80);          //force cursor to beginning of 1st line
+	delay_ms(500);
+	LCD_DATA('A');
+	delay_us(1);
+	LCD_DATA('B');
+	delay_ms(500);
+		
 	
 	//float x = 0;
 	//float y = 0;
@@ -51,14 +59,7 @@ int main(){
 		//int distloc =0;
 		ledBlue();
 		
-	  LCD_command(0x01);          //clear the screen 
-		LCD_command(0x80);          //force cursor to beginning of 1st line
-		delay_ms(500);
-		LCD_DATA('A');
-		delay_us(1);
-		LCD_DATA('B');
-	  delay_ms(500);
-		
+	  
 		
 		/*NumSplit(distloc);		 	// Split value in counter into 4 numbers
 		Display(1,digit1);								// Display number for lowest digit
