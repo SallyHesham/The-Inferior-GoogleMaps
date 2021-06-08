@@ -9,7 +9,7 @@ void led(int Dis){
 		GPIO_PORTF_DATA_R |= 0x08; 
 		}	
 		else {
-		GPIO_PORTF_DATA_R  &= ~0x08;
+		GPIO_PORTF_DATA_R  &= 0xF3;
 		}
 	
 }	

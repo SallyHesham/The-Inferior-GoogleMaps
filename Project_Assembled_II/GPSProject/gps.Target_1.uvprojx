@@ -439,11 +439,6 @@
               <FilePath>.\portsABinit.c</FilePath>
             </File>
             <File>
-              <FileName>SevenSegment.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\SevenSegment.c</FilePath>
-            </File>
-            <File>
               <FileName>lcd.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\lcd.c</FilePath>

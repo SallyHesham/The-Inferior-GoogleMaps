@@ -29,74 +29,18 @@ Project File Date:  06/08/2021
 Rebuild target 'Target_1'
 assembling fpu.s...
 compiling portEinit.c...
+compiling led.c...
 compiling main.c...
 compiling distanceMarkII.c...
-distance.c(5): warning: no previous extern declaration for non-static variable 'R' [-Wmissing-variable-declarations]
-int R = 6371 * 1000; //Radius of Earth in meter
-    ^
-distance.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int R = 6371 * 1000; //Radius of Earth in meter
-^
-distance.c(6): warning: no previous extern declaration for non-static variable 'PI' [-Wmissing-variable-declarations]
-double PI = 3.141592653589793;
-       ^
-distance.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-double PI = 3.141592653589793;
-^
-distance.c(28): warning: unused variable 'lon1' [-Wunused-variable]
-                double lon1 = dist[0][1];
-                       ^
-distance.c(30): warning: unused variable 'lon2' [-Wunused-variable]
-                double lon2 = dist[1][1];
-                       ^
-4 warnings generated.
-compiling distance.c...
-compiling portsABinit.c...
-led.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                GPIO_PORTF_DATA_R  &= ~0x08;
-                                   ~~ ^~~~~
-1 warning generated.
-compiling led.c...
-ledColors.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-        GPIO_PORTF_DATA_R &= ~0x0E; 
-                          ~~ ^~~~~
-ledColors.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-        GPIO_PORTF_DATA_R &= ~0x0E; 
-                          ~~ ^~~~~
-2 warnings generated.
-compiling ledColors.c...
-compiling portFinit.c...
-SevenSegment.c(37): warning: no previous extern declaration for non-static variable 'numbers' [-Wmissing-variable-declarations]
-int numbers[10] = {0x00,0x02,0x10,0x12,0x19,   // Each value turns on bits needed
-    ^
-SevenSegment.c(37): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int numbers[10] = {0x00,0x02,0x10,0x12,0x19,   // Each value turns on bits needed
-^
-SevenSegment.c(42): warning: no previous extern declaration for non-static variable 'calc' [-Wmissing-variable-declarations]
-unsigned long calc=0;          // Calculated value initialization
-              ^
-SevenSegment.c(42): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-unsigned long calc=0;          // Calculated value initialization
-^
-SevenSegment.c(57): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-GPIO_PORTE_DATA_R = digit; // Selects digit
-                  ~ ^~~~~
-SevenSegment.c(58): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-GPIO_PORTB_DATA_R = numbers[number]; // Turns on number in selected digit
-                  ~ ^~~~~~~~~~~~~~~
-SevenSegment.c(70): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-GPIO_PORTE_DATA_R = GPIO_PORTE_DATA_R | (hundreds << 2) ;
-                                      ~  ~~~~~~~~~^~~~
-SevenSegment.c(72): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-GPIO_PORTB_DATA_R = GPIO_PORTB_DATA_R | ((tens<<4)|units);
-                                      ~  ~~~~~~~~~^~~~~~
-6 warnings generated.
-compiling SevenSegment.c...
-assembling startup_TM4C123.s...
 compiling lcd.c...
+compiling portsABinit.c...
+compiling portFinit.c...
+compiling ledColors.c...
+compiling distance.c...
+assembling startup_TM4C123.s...
 linking...
 Program Size: Code=6652 RO-data=1028 RW-data=20 ZI-data=560  
-".\Objects\lab4_2.axf" - 0 Error(s), 13 Warning(s).
+".\Objects\lab4_2.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 

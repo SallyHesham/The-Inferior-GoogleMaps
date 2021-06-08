@@ -25,9 +25,9 @@ double distanceNew(double lat, double lon)
 		double difference_lat = (dist[1][0] - dist[0][0]);
 		double difference_lon = (dist[1][1] - dist[0][1]);
 		double lat1 = dist[0][0];
-		double lon1 = dist[0][1];
+		//double lon1 = dist[0][1];
 		double lat2 = dist[1][0];
-		double lon2 = dist[1][1];
+		//double lon2 = dist[1][1];
 		double a = sin(difference_lat / 2) * sin(difference_lat / 2) + cos(lat1) * cos(lat2) *
 			sin(difference_lon / 2) * sin(difference_lon / 2);
 		double c = 2 * asin(sqrt(a));

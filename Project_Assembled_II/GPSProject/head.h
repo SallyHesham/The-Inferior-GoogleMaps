@@ -27,5 +27,6 @@ void delay_us(int n);
 void LCD_command(unsigned char com);
 void LCD_DATA(unsigned char data);
 void Delayyy(void);
-
+extern int R;
+extern double PI;
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))

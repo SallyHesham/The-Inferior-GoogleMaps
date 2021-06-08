@@ -7,11 +7,11 @@ void ledRed(){
 }
 
 void ledBlue(){
-	GPIO_PORTF_DATA_R &= ~0x0E; 
+	GPIO_PORTF_DATA_R &= 0xF1; 
 	GPIO_PORTF_DATA_R |= 0x04; 
 }
 
 void ledGreen(){
-	GPIO_PORTF_DATA_R &= ~0x0E; 
+	GPIO_PORTF_DATA_R &= 0xF1; 
 	GPIO_PORTF_DATA_R |= 0x08; 
 }
