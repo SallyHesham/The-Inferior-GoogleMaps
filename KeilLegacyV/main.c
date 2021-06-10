@@ -31,8 +31,6 @@ int main(){
   delay_ms(5);
   delay_ms(20);	
 	
-
-	
 	LCD_command(0x01);          //clear the screen 
 	LCD_command(0x80);          //force cursor to beginning of 1st line
 	delay_ms(500);
@@ -41,26 +39,14 @@ int main(){
 	LCD_DATA('B');
 	delay_ms(500);
 		
-		
 	ledRed();
 	
-	//float x = 0;
-	//float y = 0;
-	//srand(1);
 	for(int i=0;i<100;i++){
-		//x += rand()/(RAND_MAX);
-		//y += rand()/(RAND_MAX);
+
 		Delayyy();
 		int distloc = (int)(distanceNew((double)(0.5+i),(double)(0.4+i))+ (double)0.5);
-			//float x = i/10+0.1;
-			//float y = i/10+0.2;
-			//totDist += (int)(distance(x,y)+0.5);
-			//GPIO_PORTB_DATA_R = totDist;
 
-		//int distloc =0;
 		ledBlue();
-		
-	  
 		
 		/*NumSplit(distloc);		 	// Split value in counter into 4 numbers
 		Display(1,digit1);								// Display number for lowest digit
