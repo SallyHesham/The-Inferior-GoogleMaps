@@ -194,9 +194,10 @@ Removing Unused input sections from the image.
     Removing startup_tm4c123.o(HEAP), (0 bytes).
     Removing porteinit.o(.text), (84 bytes).
     Removing led.o(.text), (44 bytes).
+    Removing uart2init.o(.text), (128 bytes).
     Removing cdcmple.o(.text), (48 bytes).
 
-4 unused section(s) (total 176 bytes) removed from the image.
+5 unused section(s) (total 304 bytes) removed from the image.
 
 ==============================================================================
 
@@ -208,23 +209,23 @@ Image Symbol Table
 
     RESET                                    0x00000000   Section      620  startup_tm4c123.o(RESET)
     ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
@@ -245,12 +246,13 @@ Image Symbol Table
     ../mathlib/fpclassify.c                  0x00000000   Number         0  fpclassify.o ABSOLUTE
     ../mathlib/poly.c                        0x00000000   Number         0  poly.o ABSOLUTE
     ../mathlib/rred.c                        0x00000000   Number         0  rred.o ABSOLUTE
-    ../mathlib/sin.c                         0x00000000   Number         0  sin_x.o ABSOLUTE
     ../mathlib/sin.c                         0x00000000   Number         0  sin.o ABSOLUTE
-    ../mathlib/sin_i.c                       0x00000000   Number         0  sin_i.o ABSOLUTE
+    ../mathlib/sin.c                         0x00000000   Number         0  sin_x.o ABSOLUTE
     ../mathlib/sin_i.c                       0x00000000   Number         0  sin_i_x.o ABSOLUTE
+    ../mathlib/sin_i.c                       0x00000000   Number         0  sin_i.o ABSOLUTE
     ../mathlib/sqrt.c                        0x00000000   Number         0  sqrt.o ABSOLUTE
     ../mathlib/sqrt.c                        0x00000000   Number         0  sqrt_x.o ABSOLUTE
+    UART2Init.c                              0x00000000   Number         0  uart2init.o ABSOLUTE
     cdcmple.s                                0x00000000   Number         0  cdcmple.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     distance.c                               0x00000000   Number         0  distance.o ABSOLUTE
@@ -547,16 +549,16 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000000   0x0000026c   Data   RO            3    RESET               startup_tm4c123.o
-    0x0000026c   0x0000026c   0x00000000   Code   RO          177  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x0000026c   0x0000026c   0x00000004   Code   RO          222    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00000270   0x00000270   0x00000004   Code   RO          225    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000274   0x00000274   0x00000000   Code   RO          227    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000274   0x00000274   0x00000000   Code   RO          229    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000274   0x00000274   0x00000008   Code   RO          230    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0000027c   0x0000027c   0x00000004   Code   RO          237    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x00000280   0x00000280   0x00000000   Code   RO          232    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x00000280   0x00000280   0x00000000   Code   RO          234    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x00000280   0x00000280   0x00000004   Code   RO          223    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000026c   0x0000026c   0x00000000   Code   RO          189  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x0000026c   0x0000026c   0x00000004   Code   RO          234    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000270   0x00000270   0x00000004   Code   RO          237    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000274   0x00000274   0x00000000   Code   RO          239    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000274   0x00000274   0x00000000   Code   RO          241    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000274   0x00000274   0x00000008   Code   RO          242    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0000027c   0x0000027c   0x00000004   Code   RO          249    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x00000280   0x00000280   0x00000000   Code   RO          244    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x00000280   0x00000280   0x00000000   Code   RO          246    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x00000280   0x00000280   0x00000004   Code   RO          235    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x00000284   0x00000284   0x00000110   Code   RO            4  * .text               startup_tm4c123.o
     0x00000394   0x00000394   0x000000bc   Code   RO           10    .text               lcd 1.o
     0x00000450   0x00000450   0x00000108   Code   RO           33    .text               main.o
@@ -564,45 +566,45 @@ Memory Map of the image
     0x000005bc   0x000005bc   0x000000d0   Code   RO           84    .text               portsabinit.o
     0x0000068c   0x0000068c   0x00000064   Code   RO          108    .text               ledcolors.o
     0x000006f0   0x000006f0   0x00000208   Code   RO          120    .text               distance.o
-    0x000008f8   0x000008f8   0x0000014e   Code   RO          180    .text               mf_w.l(dadd.o)
-    0x00000a46   0x00000a46   0x000000e4   Code   RO          182    .text               mf_w.l(dmul.o)
-    0x00000b2a   0x00000b2a   0x000000de   Code   RO          184    .text               mf_w.l(ddiv.o)
-    0x00000c08   0x00000c08   0x00000022   Code   RO          186    .text               mf_w.l(dflti.o)
-    0x00000c2a   0x00000c2a   0x0000003e   Code   RO          188    .text               mf_w.l(dfixi.o)
-    0x00000c68   0x00000c68   0x0000001e   Code   RO          238    .text               mc_w.l(llshl.o)
-    0x00000c86   0x00000c86   0x00000020   Code   RO          240    .text               mc_w.l(llushr.o)
-    0x00000ca6   0x00000ca6   0x00000024   Code   RO          242    .text               mc_w.l(llsshr.o)
-    0x00000cca   0x00000cca   0x00000000   Code   RO          251    .text               mc_w.l(iusefp.o)
-    0x00000cca   0x00000cca   0x000000ba   Code   RO          252    .text               mf_w.l(depilogue.o)
-    0x00000d84   0x00000d84   0x0000002e   Code   RO          254    .text               mf_w.l(dscalb.o)
-    0x00000db2   0x00000db2   0x000000a2   Code   RO          256    .text               mf_w.l(dsqrt.o)
-    0x00000e54   0x00000e54   0x00000024   Code   RO          260    .text               mc_w.l(init.o)
-    0x00000e78   0x00000e78   0x0000001a   Code   RO          262    .text               mf_w.l(dfltui.o)
-    0x00000e92   0x00000e92   0x00000028   Code   RO          207    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
+    0x000008f8   0x000008f8   0x0000014e   Code   RO          192    .text               mf_w.l(dadd.o)
+    0x00000a46   0x00000a46   0x000000e4   Code   RO          194    .text               mf_w.l(dmul.o)
+    0x00000b2a   0x00000b2a   0x000000de   Code   RO          196    .text               mf_w.l(ddiv.o)
+    0x00000c08   0x00000c08   0x00000022   Code   RO          198    .text               mf_w.l(dflti.o)
+    0x00000c2a   0x00000c2a   0x0000003e   Code   RO          200    .text               mf_w.l(dfixi.o)
+    0x00000c68   0x00000c68   0x0000001e   Code   RO          250    .text               mc_w.l(llshl.o)
+    0x00000c86   0x00000c86   0x00000020   Code   RO          252    .text               mc_w.l(llushr.o)
+    0x00000ca6   0x00000ca6   0x00000024   Code   RO          254    .text               mc_w.l(llsshr.o)
+    0x00000cca   0x00000cca   0x00000000   Code   RO          263    .text               mc_w.l(iusefp.o)
+    0x00000cca   0x00000cca   0x000000ba   Code   RO          264    .text               mf_w.l(depilogue.o)
+    0x00000d84   0x00000d84   0x0000002e   Code   RO          266    .text               mf_w.l(dscalb.o)
+    0x00000db2   0x00000db2   0x000000a2   Code   RO          268    .text               mf_w.l(dsqrt.o)
+    0x00000e54   0x00000e54   0x00000024   Code   RO          272    .text               mc_w.l(init.o)
+    0x00000e78   0x00000e78   0x0000001a   Code   RO          274    .text               mf_w.l(dfltui.o)
+    0x00000e92   0x00000e92   0x00000028   Code   RO          219    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
     0x00000eba   0x00000eba   0x00000002   PAD
-    0x00000ebc   0x00000ebc   0x00000388   Code   RO          211    i.__ieee754_rem_pio2  m_ws.l(rred.o)
-    0x00001244   0x00001244   0x000000fc   Code   RO          190    i.__kernel_cos      m_ws.l(cos_i.o)
-    0x00001340   0x00001340   0x000000aa   Code   RO          209    i.__kernel_poly     m_ws.l(poly.o)
+    0x00000ebc   0x00000ebc   0x00000388   Code   RO          223    i.__ieee754_rem_pio2  m_ws.l(rred.o)
+    0x00001244   0x00001244   0x000000fc   Code   RO          202    i.__kernel_cos      m_ws.l(cos_i.o)
+    0x00001340   0x00001340   0x000000aa   Code   RO          221    i.__kernel_poly     m_ws.l(poly.o)
     0x000013ea   0x000013ea   0x00000002   PAD
-    0x000013ec   0x000013ec   0x000000ec   Code   RO          216    i.__kernel_sin      m_ws.l(sin_i.o)
-    0x000014d8   0x000014d8   0x00000006   Code   RO          194    i.__mathlib_dbl_infnan  m_ws.l(dunder.o)
-    0x000014de   0x000014de   0x0000000c   Code   RO          196    i.__mathlib_dbl_invalid  m_ws.l(dunder.o)
+    0x000013ec   0x000013ec   0x000000ec   Code   RO          228    i.__kernel_sin      m_ws.l(sin_i.o)
+    0x000014d8   0x000014d8   0x00000006   Code   RO          206    i.__mathlib_dbl_infnan  m_ws.l(dunder.o)
+    0x000014de   0x000014de   0x0000000c   Code   RO          208    i.__mathlib_dbl_invalid  m_ws.l(dunder.o)
     0x000014ea   0x000014ea   0x00000002   PAD
-    0x000014ec   0x000014ec   0x00000010   Code   RO          199    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
-    0x000014fc   0x000014fc   0x0000000e   Code   RO          266    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0000150a   0x0000150a   0x00000002   Code   RO          267    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0000150c   0x0000150c   0x0000000e   Code   RO          268    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000014ec   0x000014ec   0x00000010   Code   RO          211    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
+    0x000014fc   0x000014fc   0x0000000e   Code   RO          278    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000150a   0x0000150a   0x00000002   Code   RO          279    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0000150c   0x0000150c   0x0000000e   Code   RO          280    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0000151a   0x0000151a   0x00000002   PAD
-    0x0000151c   0x0000151c   0x0000000c   Code   RO          246    i.__set_errno       mc_w.l(errno.o)
-    0x00001528   0x00001528   0x00000270   Code   RO          144    i.asin              m_ws.l(asin.o)
-    0x00001798   0x00001798   0x0000009c   Code   RO          154    i.cos               m_ws.l(cos.o)
-    0x00001834   0x00001834   0x000000a0   Code   RO          162    i.sin               m_ws.l(sin.o)
-    0x000018d4   0x000018d4   0x0000004c   Code   RO          170    i.sqrt              m_ws.l(sqrt.o)
-    0x00001920   0x00001920   0x00000050   Data   RO          145    .constdata          m_ws.l(asin.o)
-    0x00001970   0x00001970   0x00000030   Data   RO          191    .constdata          m_ws.l(cos_i.o)
-    0x000019a0   0x000019a0   0x000000c8   Data   RO          213    .constdata          m_ws.l(rred.o)
-    0x00001a68   0x00001a68   0x00000028   Data   RO          217    .constdata          m_ws.l(sin_i.o)
-    0x00001a90   0x00001a90   0x00000020   Data   RO          264    Region$$Table       anon$$obj.o
+    0x0000151c   0x0000151c   0x0000000c   Code   RO          258    i.__set_errno       mc_w.l(errno.o)
+    0x00001528   0x00001528   0x00000270   Code   RO          156    i.asin              m_ws.l(asin.o)
+    0x00001798   0x00001798   0x0000009c   Code   RO          166    i.cos               m_ws.l(cos.o)
+    0x00001834   0x00001834   0x000000a0   Code   RO          174    i.sin               m_ws.l(sin.o)
+    0x000018d4   0x000018d4   0x0000004c   Code   RO          182    i.sqrt              m_ws.l(sqrt.o)
+    0x00001920   0x00001920   0x00000050   Data   RO          157    .constdata          m_ws.l(asin.o)
+    0x00001970   0x00001970   0x00000030   Data   RO          203    .constdata          m_ws.l(cos_i.o)
+    0x000019a0   0x000019a0   0x000000c8   Data   RO          225    .constdata          m_ws.l(rred.o)
+    0x00001a68   0x00001a68   0x00000028   Data   RO          229    .constdata          m_ws.l(sin_i.o)
+    0x00001a90   0x00001a90   0x00000020   Data   RO          276    Region$$Table       anon$$obj.o
 
 
     Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00001ab0, Size: 0x00000024, Max: 0xffffffff, ABSOLUTE)
@@ -611,7 +613,7 @@ Memory Map of the image
 
     0x20000000   0x00001ab0   0x00000010   Data   RW           35    .data               main.o
     0x20000010   0x00001ac0   0x00000010   Data   RW          121    .data               distance.o
-    0x20000020   0x00001ad0   0x00000004   Data   RW          247    .data               mc_w.l(errno.o)
+    0x20000020   0x00001ad0   0x00000004   Data   RW          259    .data               mc_w.l(errno.o)
 
 
     Execution Region ER_ZI (Exec base: 0x20000024, Load base: 0x00001ad4, Size: 0x00000224, Max: 0xffffffff, ABSOLUTE)

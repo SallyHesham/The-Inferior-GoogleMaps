@@ -172,7 +172,7 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
+            <Capability>1</Capability>
             <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
@@ -471,6 +471,11 @@
               <FileName>distance.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\distance.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART2Init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UART2Init.c</FilePath>
             </File>
           </Files>
         </Group>

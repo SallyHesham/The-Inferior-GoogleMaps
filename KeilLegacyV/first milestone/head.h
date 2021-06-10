@@ -29,4 +29,5 @@ void LCD_DATA(unsigned char data);
 void Delayyy(void);
 extern int R;
 extern double PI;
+void UART2Init(void);
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))
