@@ -30,4 +30,5 @@ void Delayyy(void);
 extern int R;
 extern double PI;
 void UART2Init(void);
+void readGPSModule(void);
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))
