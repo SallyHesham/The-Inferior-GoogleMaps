@@ -19,8 +19,6 @@ extern double CY;
 extern int first_point;
 extern double total_distance;
 extern double dist[2][2];
-//extern double distance;
-//int distanceMarkIII(int x, int y);
 double distanceNew(double lat,double lon);
 void delay_ms(int n);
 void delay_us(int n);

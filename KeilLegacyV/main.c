@@ -17,7 +17,6 @@ void Delayyy(void){
 }
 
 int main(){
-	//CPACR = CPACR | (0xF << 20);
 	initPortF();
 	initPortAB();
 	UART2Init();
