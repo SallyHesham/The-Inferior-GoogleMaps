@@ -477,6 +477,11 @@
               <FileType>1</FileType>
               <FilePath>.\UART2Init.c</FilePath>
             </File>
+            <File>
+              <FileName>numSplitToChar.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\numSplitToChar.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

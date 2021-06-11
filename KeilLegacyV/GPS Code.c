@@ -30,7 +30,7 @@ void readGPSModule();
 
 
 
-void read(void)
+void gpsSetup(void)
 {
 
 	
@@ -52,11 +52,11 @@ void read(void)
 	before N(North)--Latitude
 	befofe E--Longitude 
 	*/
-    while(1){
+   /* while(1){
         readGPSModule();
     }
     //UARTDisable(UART1_BASE);
-
+*/
 }
 
 // When there is transmition, the location will be taken. And SMS will be sent.
@@ -124,7 +124,7 @@ void readGPSModule(void){
                                     minutes=latitude-(double)(degrees*100);
                                     seconds=minutes/60.00;
                                     result=degrees+seconds;
-                                    sprintf(latitudeResult,"%f", result);
+                                    //sprintf(latitudeResult,"%f", result);
 
 
                                     //longitude calculation
@@ -132,9 +132,12 @@ void readGPSModule(void){
                                     minutes=longitude-(double)(degrees*100);
                                     seconds=minutes/60.00;
                                     result=degrees+seconds;
-                                    sprintf(longitudeResult, "%f", result);
+                                    //sprintf(longitudeResult, "%f", result);
+																	
+																	lat = latitude;
+																	lon = longitude;
 
-
+/*
                                     //printf("https://www.google.com/maps/place/%s+%s \n",latitudeResult,longitudeResult);
                                     //date correction
                                     for(i=0;i<6;i++){
@@ -159,20 +162,22 @@ void readGPSModule(void){
 
 
 
-
-                                    printf("time  = %s\n",CurrentTime);
-                                    printf("date = %s\n",date);
-                                    printf("latitude = %s\n",latitudeResult);
-                                    printf("longitude= %s\n\n\n",longitudeResult);
-                                    SysCtlDelay(SysCtlClockGet()/6);}
+*/
+                                    //printf("time  = %s\n",CurrentTime);
+                                    //printf("date = %s\n",date);
+                                    //printf("latitude = %s\n",latitudeResult);
+                                    //printf("longitude= %s\n\n\n",longitudeResult);
+                                    //SysCtlDelay(SysCtlClockGet()/6);
+																		}
                                 else{
-                                    printf("Reading GPS Data\n\n\n");}
+                                    //printf("Reading GPS Data\n\n\n");
+																	}
 
-                                printf("");
+                                //printf("");
                         }}}}}}}
 }
 
-
+/*
 char* settime(char str[]){
     int num10 = str[0]-'0';
     int num1 = str[1]-'0';
@@ -192,3 +197,4 @@ char* settime(char str[]){
         str[1]=(timeData%10)+'0';}
     return str;
 }
+*/
