@@ -27,28 +27,28 @@ void delay_us(int n)
  }
 	
 
-void LCD_command(unsigned char com)
+void LCD_command(unsigned char command)
 {
 	
-	GPIO_PORTA_DATA_R=0;        //Rs=0 send command, Rw=0 write, E=0 initially enable=0 
+	GPIO_PORTA_DATA_R=0;        
 	delay_ms(1);
-	GPIO_PORTA_DATA_R |=0x40;   // E=1 (low to high) without affecting other pins
+	GPIO_PORTA_DATA_R |=0x40;   
   delay_ms(1);	
-	GPIO_PORTB_DATA_R=com;      // send command to the screen
+	GPIO_PORTB_DATA_R=command;      
 	delay_us(1);
-	GPIO_PORTA_DATA_R=0;        // E=0 agian
+	GPIO_PORTA_DATA_R=0;        
   delay_us(1);
 	
 }	
 	
 void LCD_DATA(unsigned char data)
 { 	
-  GPIO_PORTA_DATA_R=0x80;        //Rs=1 send data, Rw=0 write,E=0 initially enable=0  
+  GPIO_PORTA_DATA_R=0x80;         
 	delay_ms(1);
-	GPIO_PORTA_DATA_R |=0x40;      // E=1 (low to high) without affecting other pins 
+	GPIO_PORTA_DATA_R |=0x40;      
 	delay_ms(1);
-	GPIO_PORTB_DATA_R=data;        // send data to the screen
+	GPIO_PORTB_DATA_R=data;        
 	delay_us(1);
-	GPIO_PORTA_DATA_R=0;           //Rs=0 Rw=0 E=0(back to the beginning)
+	GPIO_PORTA_DATA_R=0;           
   delay_us(50);
 }

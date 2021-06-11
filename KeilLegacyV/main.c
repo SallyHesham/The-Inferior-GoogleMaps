@@ -41,6 +41,7 @@ int main(){
 	while(1){
 
 		//readGPSModule();
+		
 		int distloc = (int)(distanceNew(lat,lon)+(double)0.5);
 
 		ledBlue();
