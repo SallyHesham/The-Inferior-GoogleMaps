@@ -5,48 +5,9 @@
 #include <string.h>
 #include <math.h>
 
-/*long double toRadians(const long double degree)
-{ //long double M_PI = (long double) 3.141592654;
-long double one_deg = 3.141592654 / 180;
-return (one_deg * degree);
-}
-
-
-long double distance(long double lat1, long double long1,
-long double lat2, long double long2)
-{
-// Convert the latitudes
-// and longitudes
-// from degree to radians.
-lat1 = toRadians(lat1);
-long1 = toRadians(long1);
-lat2 = toRadians(lat2);
-long2 = toRadians(long2);
-//printf("%f %f %f %f \n", lat1,long1,lat2,long2);
-// Haversine Formula
-long double dlong = long2 - long1;
-long double dlat = lat2 - lat1;
-//printf("%f %f \n", dlong,dlat);
-long double ans = pow(sin(dlat / 2), 2) +
-cos(lat1) * cos(lat2) *
-pow(sin(dlong / 2), 2);
-//printf("%f \n", ans);
-ans = 2 * asin(sqrt(ans));
-//printf(("%f \n"), ans);
-// Radius of Earth in
-// Kilometers, R = 6371
-// Use R = 3956 for miles
-long double R = 6371;
-
-
- // Calculate the result
-ans = ans * R;
-//printf("%f \n", ans);
-return ans;
-}*/
 
 //GPS Code
-//$GPRMC,200751.00,A,4047.32510,N,02929.63031,E,9.879,105.80,301117,,,A*6C
+
 void ReadGpsModule(){
 char GPS_values[100],latitudeIs[10],longitudeIs[10],*token,parseValue[12][20];
 double latitude=0.0,longitude=0.0,seconds=0.0,minutes=0.0,Lat=0.0,Lon=0.0;
@@ -58,7 +19,7 @@ int index=0,degrees;
 while((UART2_FR_R&0x0010) !=0);
 m0 = UART2_DR_R&0xFF;
 if(m0 =='$'){
-while((UART2_FR_R&0x0010) !=0);//while fifo is not empty
+while((UART2_FR_R&0x0010) !=0);
 m1 = UART2_DR_R &0xFF;
 if(m1 == 'G'){
 while((UART2_FR_R&0x0010) !=0);
@@ -78,7 +39,8 @@ m6 = UART2_DR_R&0xFF;
 if(m6 == ','){
 while((UART2_FR_R&0x0010) !=0);
 m7 = UART2_DR_R&0xFF;
-	 //assign the data to the GPSValues array. read up to the last data checksum (like checksum: A*60)
+
+//assign the data to the GPSValues array. read up to the last data checksum (like checksum: A*60)
 while(m7 !='*'){
 GPS_values[index] = m7; //20
 while((UART2_FR_R&0x0010) !=0);
@@ -104,7 +66,7 @@ minutes=latitude-(double)(degrees*100);
 seconds=minutes/60.00;
 Lat=degrees+seconds;
 	
-sprintf(latitudeIs,"%f", Lat);
+//sprintf(latitudeIs,"%f", Lat);
 	
 //longitude calculation
 degrees=longitude/100;
@@ -114,9 +76,7 @@ Lon=degrees+seconds;
 
 
 
-sprintf(longitudeIs,"%f",Lon);
-
-
+//sprintf(longitudeIs,"%f",Lon);
 
 
 /*printf("lat = %s\n",latitudeIs);
