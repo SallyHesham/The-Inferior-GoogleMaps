@@ -29,8 +29,9 @@ extern int R;
 extern double PI;
 void UART2Init(void);
 void readGPSModule(void);
-void gpsSetup(void);
+//void gpsSetup(void);
 extern double lat;
 extern double lon;
+double atof (const char*);
 
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))

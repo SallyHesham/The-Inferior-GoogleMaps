@@ -482,6 +482,11 @@
               <FileType>1</FileType>
               <FilePath>.\numSplitToChar.c</FilePath>
             </File>
+            <File>
+              <FileName>GPS Modified.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\GPS Modified.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
