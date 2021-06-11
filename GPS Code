@@ -104,7 +104,7 @@ void readGPSModule(void){
                                     index++;}
 
 
-                                //Separating the data in the GPSValues ??array by comma
+                                //Separating the data in the GPSValues array by comma
                                 index=0;
                                 token = strtok(GPSValues, comma);
                                 while( token != NULL ) {
