@@ -30,7 +30,7 @@ while((UART2_FR_R&0x0010) !=0);
 m3 = UART2_DR_R&0xFF;
 if(m3 == 'R'){
 while((UART2_FR_R&0x0010) !=0);
-m3 = UART2_DR_R&0xFF;
+m4 = UART2_DR_R&0xFF;
 if(m4 == 'M'){
 while((UART2_FR_R&0x0010) !=0);
 m5 = UART2_DR_R&0xFF;
@@ -90,3 +90,4 @@ printf("\Error\n");*/
 }
 }}}}}}}
 }
+
