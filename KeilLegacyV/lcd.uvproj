@@ -438,11 +438,6 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>portEinit.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\portEinit.c</FilePath>
-            </File>
-            <File>
               <FileName>portFinit.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\portFinit.c</FilePath>

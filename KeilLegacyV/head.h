@@ -12,10 +12,6 @@ void ledBlue(void);
 void ledGreen(void);
 float distanceMarkII(float x, float y);
 extern char digit1, digit2, digit3;
-extern double PX;
-extern double PY;
-extern double CX;
-extern double CY;
 extern int first_point;
 extern double total_distance;
 extern double dist[2][2];
@@ -30,8 +26,8 @@ extern double PI;
 void UART2Init(void);
 void readGPSModule(void);
 //void gpsSetup(void);
-extern double lat;
-extern double lon;
+extern double latglo;
+extern double longlo;
 double atof (const char*);
 
 #define CPACR     (*((volatile unsigned long *)0xE000ED88))

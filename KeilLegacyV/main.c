@@ -5,8 +5,8 @@
 int first_point = 0;
 double total_distance = 0;
 double dist[2][2];
-double lat = 0;
-double lon = 0;
+double latglo = 0;
+double longlo = 0;
 
 void Delayyy(void){
 	unsigned long volatile time;
@@ -20,8 +20,6 @@ int main(){
 	initPortF();
 	initPortAB();
 	UART2Init();
-	//gpsSetup();
-	//PortE_Init();
 	
   delay_ms(20);
 	LCD_command(0x38);          
@@ -41,13 +39,13 @@ int main(){
 
 		readGPSModule();
 		
-		int distloc = (int)(distanceNew(lat,lon)+(double)0.5);
+		int distloc = (int)(distanceNew(latglo,longlo)+(double)0.5);
 
-		ledBlue();
+		if(distloc<100){ledBlue();}
 		
-		NumSplit(distloc);		 	// Split value in counter into 4 numbers
-		LCD_command(0x01);          //clear the screen 
-		LCD_command(0x80);          //force cursor to beginning of 1st line
+		NumSplit(distloc);		 	// Split value in counter into 3 numbers
+		LCD_command(0x01);          
+		LCD_command(0x80);          
 		delay_ms(500);
 		LCD_DATA(digit1);
 		delay_us(1);
@@ -56,9 +54,9 @@ int main(){
 		LCD_DATA(digit3);
 		delay_ms(500);
 		
-		if (distloc > 100){ledGreen();}	
+		if (distloc >= 100){ledGreen();}	
 		
-		if((UART2_FR_R & 0x40) != 0) {ledRed(); while(1);}
+		
 	}
 	
 	/*

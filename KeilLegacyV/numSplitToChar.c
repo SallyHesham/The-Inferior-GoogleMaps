@@ -6,7 +6,7 @@ char digit1, digit2, digit3;
 
 void NumSplit(int calculated){
 int hundreds = calculated/100;
-int tens = (calculated%100)*10;
+int tens = (calculated%100)/10;
 int units = calculated - (hundreds*100) - (tens*10);
 	digit1 = chars[hundreds];
 	digit2 = chars[tens];

@@ -75,8 +75,8 @@ minutes=longitude-(double)(degrees*100);
 seconds=minutes/60.00;
 Lon=degrees+seconds;
 
-lat = Lat;
-lon = Lon;
+latglo = Lat;
+longlo = Lon;
 
 //sprintf(longitudeIs,"%f",Lon);
 

@@ -2,7 +2,6 @@
 ".\startup_tm4c123.o"
 ".\lcd 1.o"
 ".\main.o"
-".\porteinit.o"
 ".\portfinit.o"
 ".\portsabinit.o"
 ".\led.o"

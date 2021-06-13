@@ -2,8 +2,6 @@
 #include "math.h"
 #include "tm4c123gh6pm.h"
 
-#define PI 3.14159265
-#define R 6371000
 
 void SystemInit(){}
 	
