@@ -62,7 +62,6 @@ latitude=atof(parseValue[2]);
 longitude=atof(parseValue[4]);
 	
 //latitude calculation
-	if (comma ==1)       //getting latitude 
 degrees=latitude/100;
 minutes=latitude-(double)(degrees*100);
 seconds=minutes/60.00;
@@ -71,7 +70,6 @@ Lat=degrees+seconds;
 //sprintf(latitudeIs,"%f", Lat);
 	
 //longitude calculation
-if (comma ==3)       //getting longitude	
 degrees=longitude/100;
 minutes=longitude-(double)(degrees*100);
 seconds=minutes/60.00;
